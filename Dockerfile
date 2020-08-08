@@ -1,6 +1,6 @@
-FROM php:7.4-cli
+FROM php:7.0-apache
 
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
+COPY . /var/www/html
+WORKDIR /var/www/html
 
-CMD [ "php", "./hello.php" ]
+EXPOSE 80
